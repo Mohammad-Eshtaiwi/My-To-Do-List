@@ -36,7 +36,7 @@ function populateTasks() {
   const tasks = JSON.parse(localStorage.getItem("tasks"));
   tasks.forEach((task) => {
     const tr = document.createElement("tr");
-    console.log(task);
+    // tr.setAttribute("taskId");
     for (var data in task) {
       console.log(task[data]);
       if (data === "urquency") {
@@ -67,3 +67,12 @@ function clearAll() {
   localStorage.clear();
   table.innerHTML = "";
 }
+let deleteRowBtn = document.querySelectorAll(
+  "main section:last-of-type table tr td:last-of-type"
+);
+function deleteTask() {
+  console.log(event.path);
+}
+deleteRowBtn.forEach((btn) => {
+  addEventListener("click", deleteTask);
+});

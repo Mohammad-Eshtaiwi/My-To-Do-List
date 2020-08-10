@@ -33,6 +33,10 @@ main section:last-of-type table {
   margin: 0;
   width: 100%;
   margin-bottom: 10px;
+  text-align: center;
+}
+main section:last-of-type table tr td:last-of-type {
+  cursor: pointer;
 }
 main section:last-of-type table tr,
 main section:last-of-type table td,
