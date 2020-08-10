@@ -39,6 +39,15 @@ function populateTasks() {
     console.log(task);
     for (var data in task) {
       console.log(task[data]);
+      if (data === "urquency") {
+        const td = document.createElement("td");
+        if (task[data] === "low") td.classList.add("green");
+        if (task[data] === "medium") td.classList.add("yellow");
+        if (task[data] === "high") td.classList.add("red");
+        td.innerHTML = task[data];
+        tr.appendChild(td);
+        continue;
+      }
       const td = document.createElement("td");
       td.innerHTML = task[data];
       tr.appendChild(td);

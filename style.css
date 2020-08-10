@@ -47,3 +47,12 @@ main section:last-of-type table th {
   padding: 10px 20px;
   text-transform: capitalize;
 }
+.yellow {
+  color: yellow;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
