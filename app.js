@@ -71,7 +71,16 @@ let deleteRowBtn = document.querySelectorAll(
   "main section:last-of-type table tr td:last-of-type"
 );
 function deleteTask() {
-  console.log(event.path);
+  console.log(event.path[2].children);
+  let rightPath = 0;
+  let rightIndex = 0;
+  for (let tr = 0; tr < event.path[2].children.length; tr++) {
+    if (event.path[2].children[tr] === event.path[1]) {
+      rightPath = event.path[2].children[tr];
+      rightIndex = tr;
+    }
+  }
+  console.log(rightPath);
 }
 deleteRowBtn.forEach((btn) => {
   addEventListener("click", deleteTask);
